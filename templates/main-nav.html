@@ -1,0 +1,17 @@
+<nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="main-menu">
+        <ul class="nav navbar-nav">
+			<li><a href="/" {% if path == '/' %}class="active"{% endif %}>Home</a></</li>
+			<li><a href="/about" {% if 'about' in path %}class="active"{% endif %}>About</a></li>
+			<li><a href="/news" {% if 'news' in path %}class="active"{% endif %}>News</a></li>
+			<li><a href="/resources" {% if 'resources' in path %}class="active"{% endif %}>Resources</a></li>
+		</ul>
+    </div>
+</nav>

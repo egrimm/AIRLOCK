@@ -1,0 +1,38 @@
+*{font-family:'Open Sans', sans-serif;font-size:14px;color:#6d6e71;}
+h1, h2, h3, h4{font-family:'Open Sans', sans-serif;padding:0;margin:.5em 0;}
+h1{font-size:44px;}
+.light{font-weight:300;}
+.semi-bold{font-weight:600;}
+.super-header{padding-top:20px;height:72px;background:transparent url('/static/images/background-superheader.png') 0 0 repeat-x;font-size:1.2em;font-weight:600;}
+#left-rail{background-color:#f5f5f5;min-height:900px;position:relative;width:222px;}
+nav.navbar{background:transparent url('/static/images/background-menu.png') top left repeat-x;border-radius:0;border:none;}
+ul.navbar-nav li a{color:#ffffff !important;}
+ul.navbar-nav li a.active{font-weight:bold;}
+/*.navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }*/
+#main-content{padding:0 2em 2em 4em;}
+.page-header{text-align:center;border-bottom:none;padding:0 4em;}
+.page-header h1{margin-bottom:.5em;}
+.home-intro{background: #282828 url('/static/images/background-intro.png') top left repeat-x;color:#eeeeee;border-radius:5px;padding:1em;margin:1em;font-size:13px;}
+.home-intro h1{font-size:40px;margin:0;padding:0;color:#ffffff;}
+.home-intro h3{font-size:26px;margin:0;padding:0;}
+.text-required{color:#ff0000;}
+#countdown-timer{font-size:30px;font-weight:600;line-height:1.2;}
+#countdown-timer div{background:transparent url('/static/images/background-countdown.png') 0 0 no-repeat;width:29px;height:37px;overflow:hidden;font-size:inherit;font-weight:inherit;display:inline-block;}
+#countdown-timer span{font-size:inherit;line-height:0;}
+#collapseBeginner, #collapseIntermediate, #collapseAdvanced, #collapsePrevContests, #collapseCurrentContest{padding-left:2em;}
+.collapse-more{background:transparent url('/static/images/button-more.png') 0 0 no-repeat;display:inline-block;width:24px;height:24px;}
+.collapse-less{background:transparent url('/static/images/button-less.png') 0 0 no-repeat;display:inline-block;width:24px;height:24px;}
+h3.accordion-title{border-top:1px solid #eeeeee;border-bottom:1px solid #eeeeee;padding:.25em;}
+h3.accordion-title img, h3.panel-title img{vertical-align:text-bottom;}
+h3.accordion-title a, h3.panel-title a{text-decoration:none;}
+.small, small{font-size:85%;}
+a{font-size:inherit;font-weight:inherit;}
+hr{color:#a8a9ac;background-color:#a8a9ac;border:none;height:1px;margin:1em 0;}
+table.table{max-width:100%;}
+table.table td, table.table th, table.table td a, table.table th a{font-size:85% !important;color:#000000 !important;}
+.panel{overflow-x:visible;}

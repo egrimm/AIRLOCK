@@ -1,0 +1,6 @@
+# cron.yaml - config file for scheduled tasks
+cron:
+##- description: Send participation prize notice to teachers
+##  url: /emails/prize-notice-teacher
+##  schedule: 1st thu of december 07:00
+##  timezone: Europe/Dublin

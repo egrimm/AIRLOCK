@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8"/>
+        <title>{% block title %}Association of Long Island Homebrew Clubs{% endblock %}</title>
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        <!-- HTML5 Shiv, Respond.js and jQuery versions for IE8 and earlier -->
+        <!--[if lt IE 9]>
+	        <link rel="stylesheet" href="/common/bootstrap3/css/bootstrap.min.css"/>
+            <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+	        <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/jquery/1.9.1/jquery.min.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+	        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.2/css/bootstrap.min.css"/>
+	        <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+        <!--<![endif]-->
+
+
+	    <link href="https://cdn.jsdelivr.net/bootswatch/3.3.2/simplex/bootstrap.min.css" rel="stylesheet"/>        
+        <link rel="stylesheet" href="/static/css/style.css"/>
+
+
+    </head>
+
+    <body>
+
+        <div>
+
+            <div class="container">
+
+               <div class="row main-nav">
+                    {% block menu %}
+                        {% include "main-nav.html" %}
+                    {% endblock menu %}
+                </div>
+
+                <div class="row">
+
+				    <div class="col-xs-12" id="main-content">
+
+                        {% if messages|e %}
+                            {% for message in messages %}
+                            <p class="alert alert-{{ message[1]|e }}">
+                                <a class="close" data-dismiss="alert">×</a>
+                                {{ message[0]|e }}
+                            </p>
+                            {% endfor %}
+                        {% endif %}
+
+                        {% block content %}
+                        {% endblock content %}
+                    </div>
+
+			    </div>
+
+            </div>
+
+        </div>
+
+        
+        <script src="https://cdn.jsdelivr.net/bootstrap/3.3.2/js/bootstrap.min.js"></script>		
+    </body>
+
+</html>
