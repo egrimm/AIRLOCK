@@ -70,10 +70,34 @@ class AboutHandler(BaseHandler):
         return self.render_template('about.html', **params)
 
 
+class AboutBeerHandler(BaseHandler):
+    def get(self):
+        params = {}
+        return self.render_template('about-beer.html', **params)
+
+
+class AboutHHCBCHandler(BaseHandler):
+    def get(self):
+        params = {}
+        return self.render_template('about-hhcbc.html', **params)
+
+
+class AboutLIBMEHandler(BaseHandler):
+    def get(self):
+        params = {}
+        return self.render_template('about-libme.html', **params)
+
+
 class NewsHandler(BaseHandler):
     def get(self):
         params = {}
         return self.render_template('news.html', **params)
+
+
+class EventsHandler(BaseHandler):
+    def get(self):
+        params = {}
+        return self.render_template('events.html', **params)
 
 
 class ResourcesHandler(BaseHandler):
