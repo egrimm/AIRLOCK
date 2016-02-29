@@ -43,4 +43,17 @@ config = {
                'flatly','journal','lumen','paper','readable','sandstone',
                'simplex','slate','spacelab','superhero','united','yeti'],
 
+    'tags': ['session-strength','standard-strength','high-strength',
+             'very-high-strength','pale-color','amber-color','dark-color',
+             'top-fermented','bottom-fermented','any-fermentation',
+             'wild-fermented','lagered','aged','british-isles','western-europe',
+             'central-europe','eastern-europe','north-america','pacific',
+             'ipa-family','brown-ale-family','pale-ale-family',
+             'pale-lager-family','pilsner-family','amber-ale-family',
+             'amber-lager-family','dark-lager-family','porter-family',
+             'stout-family','bock-family','strong-ale-family',
+             'wheat-beer-family','specialty-beer','craft-style',
+             'traditional-style','historical-style','malty','bitter','balanced',
+             'hoppy','roasty','sweet','smoke','sour','wood','fruit','spice']
+
 } # end config

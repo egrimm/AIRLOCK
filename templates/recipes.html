@@ -9,6 +9,143 @@
     <p class="lead">Welcome to the Association of Long Island Homebrew Clubs' Recipe Repository!</p>
 </div>
 
+
+
+<div class="row">
+    <div class="col-xs-10">
+
+        <div class="panel-body">
+            <div class="panel-group" id="accordion">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="pull-left">                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#beerRecipes">
+                                    Beer
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">47</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div id="beerRecipes" class="panel-collapse collapse in">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Style</th>
+                                        <th>Name</th>
+                                        <th>Brewer</th>
+                                        <th class="text-right">Rating</th>
+                                        <th class="text-right">Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>American Pale Ale</td>
+                                        <td>Monterey Pale Ale</td>
+                                        <td>Eric Grimm</td>
+                                        <td class="text-right">41</td>
+                                        <td class="text-right">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="pull-left">                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#meadRecipes">
+                                    Mead
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">8</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div id="meadRecipes" class="panel-collapse collapse">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Style</th>
+                                        <th>Name</th>
+                                        <th>Brewer</th>
+                                        <th class="text-right">Rating</th>
+                                        <th class="text-right">Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Standard Mead</td>
+                                        <td>Orange Blossom</td>
+                                        <td>Andrew Luberto</td>
+                                        <td class="text-right">43</td>
+                                        <td class="text-right">2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="pull-left">                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#meadRecipes">
+                                    Cider
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="pull-right">
+                            <span class="badge">2</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div id="ciderRecipes" class="panel-collapse collapse">
+                        <div class="table-responsive">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Style</th>
+                                        <th>Name</th>
+                                        <th>Brewer</th>
+                                        <th class="text-right">Rating</th>
+                                        <th class="text-right">Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Experimental Cider</td>
+                                        <td>Red Flannel Cider</td>
+                                        <td>Eric Grimm</td>
+                                        <td class="text-right">32</td>
+                                        <td class="text-right">3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-xs-2">
+        <h4>Tags</h4>
+        {% include "tags.html" %}
+    </div>
+</div>
+
+
+
 {% block mediajs %}
 
 {% endblock mediajs %}

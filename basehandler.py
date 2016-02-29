@@ -183,7 +183,8 @@ class BaseHandler(webapp2.RequestHandler):
             'referer': referer,# None or refereing URL
             'referer_domain': referer_domain,
             'server': socket.getfqdn(),
-            'themes': config['themes']
+            'themes': config['themes'],
+            'tags': config['tags'],
         })
         kwargs.update(self.auth_config)
         if self.messages:
