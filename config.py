@@ -20,4 +20,22 @@ config = {
     'oauth_client_id': '',
     'oauth_client_secret': '',
 
+    'club_links': {
+        'beer': {
+            'home': 'http://beerhbc.org/',
+            'join': '',
+            'contact': '',
+        },
+        'hhcbc': {
+            'home': 'http://www.hhcbc.org/',
+            'join': '',
+            'contact': '',
+        },
+        'libme': {
+            'home': 'http://beermalt.org/',
+            'join': '',
+            'contact': '',
+        },
+    }
+
 } # end config

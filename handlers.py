@@ -65,27 +65,25 @@ class MainHandler(BaseHandler):
 
 
 class AboutHandler(BaseHandler):
-    def get(self):
+    def get(self, club=None):
         params = {}
-        return self.render_template('about.html', **params)
+        if club == None:
+            return self.render_template('about.html', **params)
+        params['links'] = config['club_links'][club]
+        return self.render_template('about-'+club+'.html', **params)
 
 
-class AboutBeerHandler(BaseHandler):
-    def get(self):
+class RecipeHandler(BaseHandler):
+    def get(self, style=None, name=None):
         params = {}
-        return self.render_template('about-beer.html', **params)
-
-
-class AboutHHCBCHandler(BaseHandler):
-    def get(self):
-        params = {}
-        return self.render_template('about-hhcbc.html', **params)
-
-
-class AboutLIBMEHandler(BaseHandler):
-    def get(self):
-        params = {}
-        return self.render_template('about-libme.html', **params)
+        if style == None:
+            return self.render_template('recipes.html', **params)
+        elif style != None and name == None:
+            # todo: get <style> recipes to display in list or table
+            return self.render_template('recipes-'+style+'.html', **params)
+        elif style != None and name != None:
+            # todo: get <name> recipe to display
+            return self.render_template('recipes-'+style+'-'+name+'.html', **params)
 
 
 class NewsHandler(BaseHandler):
