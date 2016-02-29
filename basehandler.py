@@ -21,6 +21,7 @@ import random
 #import base64
 import os
 import math
+import sys
 
 
 def random_string(size=32, chars=string.ascii_letters + string.digits):
@@ -163,6 +164,10 @@ class BaseHandler(webapp2.RequestHandler):
         if hasattr(self, 'view'):
             kwargs.update(self.view.__dict__)
 
+        if self.request.get('theme') != None and self.request.get('theme') != '':
+            #logging.info('setting session.theme:%s' % self.request.get('theme'))
+            self.session['theme'] = self.request.get('theme')
+
         # set or overwrite special vars for jinja templates
         kwargs.update({
             'user': self.user,
@@ -178,10 +183,15 @@ class BaseHandler(webapp2.RequestHandler):
             'referer': referer,# None or refereing URL
             'referer_domain': referer_domain,
             'server': socket.getfqdn(),
+            'themes': config['themes']
         })
         kwargs.update(self.auth_config)
         if self.messages:
             kwargs['messages'] = self.messages
 
         self.response.headers.add_header('X-UA-Compatible', 'IE=Edge,chrome=1')
-        self.response.write(self.jinja2.render_template(filename, **kwargs))
+        try:
+            self.response.write(self.jinja2.render_template(filename, **kwargs))
+        except:
+            logging.warning(sys.exc_info())
+            self.abort(404)

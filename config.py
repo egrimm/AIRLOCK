@@ -36,6 +36,11 @@ config = {
             'join': '',
             'contact': '',
         },
-    }
+    },
+
+    # site themes (from bootswatch)
+    'themes': ['default','divider','cerulean','cosmo','cyborg','darkly',
+               'flatly','journal','lumen','paper','readable','sandstone',
+               'simplex','slate','spacelab','superhero','united','yeti'],
 
 } # end config
