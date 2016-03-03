@@ -85,6 +85,12 @@ class RecipeHandler(BaseHandler):
             # todo: get <name> recipe to display
             return self.render_template('recipes-'+style+'-'+name+'.html', **params)
 
+    def post(self):
+        params = {}
+        message = 'Search functionality is coming soon!'
+        self.add_message(message, 'info')
+        return self.render_template('recipes.html', **params)
+
 
 class NewsHandler(BaseHandler):
     def get(self):

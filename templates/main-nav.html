@@ -1,4 +1,6 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">    <div class="container">        
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
                 <span class="icon-bar"></span>
@@ -32,6 +34,15 @@
                         <li><a href="/recipes/beer">Beer</a></li>
                         <li><a href="/recipes/mead">Mead</a></li>
                         <li><a href="/recipes/cider">Cider</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <form class="navbar-form" role="search" method="post" action="recipes">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="search" name="recipeSearch" id="recipeSearch" />
+                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}" />
+                                </div>
+                            </form>
+                        </li>
                     </ul>
 			    </li>			
 		    </ul>
@@ -41,8 +52,8 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Themes <span class="caret"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="themes">
                         {% for theme in themes %}
-                            {% if theme == 'divider' %}
-                                <li class="divider"></li>
+                            {% if theme == 'divider' %}                                
+                                <li role="separator" class="divider"></li>
                             {% else %}
                                 <li {% if session['theme'] == theme %}class="active"{% endif %}><a href="?theme={{theme|e}}">{{theme|e|capitalize}}</a></li>
                             {% endif %}
