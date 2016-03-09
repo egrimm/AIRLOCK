@@ -15,6 +15,7 @@ import socket
 from urlparse import urlparse
 from datetime import datetime
 from datetime import timedelta
+import pytz
 from config import config
 import string
 import random
@@ -171,11 +172,12 @@ class BaseHandler(webapp2.RequestHandler):
         # set or overwrite special vars for jinja templates
         kwargs.update({
             'user': self.user,
-            'user_id': self.user_id,
-            'email': self.email,
-            'nickname': self.nickname,
+            #'user_id': self.user_id,
+            #'email': self.email,
+            #'nickname': self.nickname,
             'is_user_admin': self.is_user_admin,
-            'now': (datetime.utcnow() + timedelta(hours=+1)),#offset for dublin
+            #'now': (datetime.utcnow() + timedelta(hours=+1)),#offset for dublin
+            'now': datetime.now(pytz.timezone('US/Eastern')),
             'url': self.request.url,
             'path': self.request.path,
             'query_string': self.request.query_string,

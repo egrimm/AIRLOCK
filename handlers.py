@@ -9,22 +9,19 @@
 # Copyright:   (c) Eric 2016
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
-import logging
-import sys
-import os
-
-# related third party imports
-import webapp2
-from google.appengine.api import users # we are using this for authentication
-from google.appengine.ext import ndb
-
-# local application/library specific imports
 from basehandler import BaseHandler
-import models # we are using this for authorization and storing of further pii
-from config import config
 from decorators import user_required, admin_required
-import re
-import datetime
+import os
+from config import config
+
+#import logging
+#import sys
+#import webapp2
+#from google.appengine.api import users # we are using this for authentication
+#from google.appengine.ext import ndb
+#import models # we are using this for authorization and storing of further pii
+#import re
+#import datetime
 
 DEV = os.environ['SERVER_SOFTWARE'].startswith('Development')
 

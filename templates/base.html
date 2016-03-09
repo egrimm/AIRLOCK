@@ -62,6 +62,24 @@
 
 			</div>
 
+            {#<div class="row">
+                <div class="col-xs-12">
+                    <small class="pull-right">{{ now.strftime('%Y-%m-%d %I:%M %p') }}</small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <small class="pull-right">{{ now.strftime('%x %X') }}</small>
+                </div>
+            </div>#}
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <small class="pull-right">{{ now.strftime('%b %d, %Y %I:%M %p') }}</small>
+                </div>
+            </div>
+
         </div>
 
         <script>
